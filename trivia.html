@@ -1,0 +1,75 @@
+<html>
+
+<head>
+	<title> Trivia page</title>
+	<style> 
+	.dropbutton{
+	  background-color: #DC143C;
+	  color: white; 
+	  padding: 15px; 
+	  font-size: 15px; 
+	  min-width:110px;
+	  cursor:pointer;
+	 }
+	 .drop{
+		position: relative; 
+		display: inline-block;
+	 }
+	 .dropcontent {
+		display: none;
+		position: absolute;
+		background-color: #00ffff;
+		box-shadow: 10px 10px 10px #888888;
+		min-width: 110px; 
+		z-index: 1; 
+		}
+		
+	 .dropcontent a {
+		color: black; 
+		padding 15px; 
+		min-width: 110;
+		display:block; 
+	 
+	 }
+	 .drop a:hover {
+		background-color: #ddd;
+	 
+	 }
+	 
+		
+	  .show {display: block;}	 
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	</style> 
+</head> 
+
+<body>
+<div  class = "drop" >
+<button onclick = "dropD()" class = "dropbutton"> pick a Test </button>
+	<div id = "dropdown" class = "dropcontent" >
+		<a><button onclick = "changeTestNum(1)" id = "test1" > Test1</button></a>
+		<a><button onclick = "changeTestNum(2)" id = "test2" > Test2</button></a>
+		<a><button onclick = "changeTestNum(3)" id = "test3" > Test3</button></a>
+		<a><button onclick = "changeTestNum(4)" id = "test4" > Test4</button></a>
+		<a><button onclick = "changeTestNum(5)" id = "test5" > Test5</button></a>
+		<a><button onclick = "changeTestNum(6)" id = "test6" > Test6</button></a>
+
+	</div>
+<div> <p>    </p></div>
+<div>
+<button id = "load" type = "button" onclick = "load()">load test 1</button>
+<button id = "randtest" type = "button" onclick = "randload()"> Random Test</button>
+</div>
+<div id = "testbody"> </div>
+<div id = "score"> </div>
+<div id = "feedback"> </div>
+<script src = "trivia.js" ></script>
+</body>
+</html>
